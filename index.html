@@ -17,7 +17,8 @@
          Mínimo 18: se manejan máquinas de espresso y agua a alta temperatura.
          Máximo 30: es un programa de primer empleo para jóvenes -->
         <p>Inscríbete al taller de <b>Café mldcss</b> y aprende a preparar café de especialidad. Dirigido a jóvenes de
-            <b>18 a 30 años</b> que buscan su primer empleo.</p>
+            <b>18 a 30 años</b> que buscan su primer empleo.
+        </p>
         <p>Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
 
         <!-- action="#" porque no hay servidor; el formulario solo se valida en el navegador -->
@@ -89,7 +90,21 @@
             <input type="submit" value="Inscribirme al taller">
 
         </form>
+        <p id="mensaje" class="exito" hidden></p>
     </main>
+    <script>
+        const form = document.querySelector("form");
+        const mensaje = document.getElementById("mensaje");
+
+        form.addEventListener("submit", function (e) {
+            //_________________ Evita que la página se recargue al enviar ____________________
+            e.preventDefault(); // evita que la página se recargue
+            const nombre = document.getElementById("nombre").value;
+            mensaje.textContent = "¡Registrado correctamente, " + nombre + "! Te esperamos en el taller.";
+            mensaje.hidden = false;
+            form.reset(); // limpia el formulario
+        });
+    </script>
 
 </body>
 
