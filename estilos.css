@@ -106,3 +106,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #866133;
 }
+.exito {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #e6f4ea;
+  border: 2px solid #2e8b57;
+  border-radius: 4px;
+  color: #1e5c3a;
+  font-weight: bold;
+  text-align: center;
+}
