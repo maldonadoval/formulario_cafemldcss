@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5efe6;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px 25px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #5a3825;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Los radios y checkboxes van en línea, sin negritas */
+label.opcion {
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.obligatorio {
+  color: #c0392b;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Resalta el campo que se está escribiendo */
+input:focus {
+  outline: none;
+  border-color: #c68642;
+}
+
+/* VALIDACIÓN CON CSS:
+   :user-valid / :user-invalid solo se activan después de que el usuario interactúa con el campo */
+input:user-valid {
+  border-color: #2e8b57;
+}
+
+input:user-invalid {
+  border-color: #c0392b;
+  background-color: #fdecea;
+}
+
+/* TEXTO DE AYUDA: explica cómo llenar el campo desde antes de escribir */
+.ayuda {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Si el campo está mal, el texto de ayuda que está justo debajo se pone rojo */
+input:user-invalid + .ayuda {
+  color: #c0392b;
+}
+
+fieldset {
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  color: #5a3825;
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #5a3825;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #866133;
+}
